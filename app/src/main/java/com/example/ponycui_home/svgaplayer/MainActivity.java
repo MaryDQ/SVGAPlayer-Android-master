@@ -68,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         this.setupData();
         this.setupListView();
         setContentView(listView);
+
+        DonwloadSaveImg.donwloadImg(this,"https://oss.pdabc.com/20191129/8c820140-1b4b-4208-a953-5349e0bb1665.png");
     }
 
     void setupData() {
@@ -155,6 +157,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         this.listView.setBackgroundColor(Color.WHITE);
+
+
     }
 
 

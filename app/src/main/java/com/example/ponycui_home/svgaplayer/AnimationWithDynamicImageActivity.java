@@ -32,11 +32,14 @@ public class AnimationWithDynamicImageActivity extends Activity {
 
     private void loadAnimation() {
         try { // new URL needs try catch.
-            parser.decodeFromAssets("songchong3.svga", new SVGAParser.ParseCompletion() {
+            parser.decodeFromAssets("anim_receive_one_book.svga", new SVGAParser.ParseCompletion() {
                 @Override
                 public void onComplete(@NotNull SVGAVideoEntity videoItem) {
                     SVGADynamicEntity dynamicEntity = new SVGADynamicEntity();
-                    dynamicEntity.setDynamicImage("https://oss.pdabc.com/20191126/f351571b-7d18-4a8a-96fa-e8b49c4c49de.png", "course"); // Here is the KEY implementation.
+//                    dynamicEntity.setDynamicImage("https://oss.pdabc.com/20191126/f351571b-7d18-4a8a-96fa-e8b49c4c49de.png", "course"); // Here is the KEY implementation.
+//                    if (null!= DonwloadSaveImg.mBitmap) {
+//                        dynamicEntity.setDynamicImage(DonwloadSaveImg.mBitmap,"course");
+//                    }
                     SVGADrawable drawable = new SVGADrawable(videoItem, dynamicEntity);
                     animationView.setImageDrawable(drawable);
                     animationView.startAnimation();
